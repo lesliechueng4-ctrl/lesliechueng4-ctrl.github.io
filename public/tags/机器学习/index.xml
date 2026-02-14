@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>机器学习 on JC&#39;s Blog</title>
+    <link>https://lesliechueng4-ctrl.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on JC&#39;s Blog</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 14 Feb 2026 17:35:00 +0800</lastBuildDate>
+    <atom:link href="https://lesliechueng4-ctrl.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>股票分析工具：基于 XGBoost 的智能预测系统</title>
+      <link>https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/</link>
+      <pubDate>Sat, 14 Feb 2026 17:35:00 +0800</pubDate>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/</guid>
+      <description>&lt;p&gt;最近做了一个股票分析工具，用机器学习预测股价走势。分享一下实现思路和使用方法。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;经常关注股市，但手动分析太耗时。于是用 Python 做了个自动化工具，整合了数据收集、技术指标计算和机器学习预测。&lt;/p&gt;
+&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据源&lt;/strong&gt;: akshare（A股实时数据）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术指标&lt;/strong&gt;: ta-lib（MACD、RSI、KDJ 等 20+ 指标）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ML 模型&lt;/strong&gt;: XGBoost 回归&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据处理&lt;/strong&gt;: pandas、numpy、scikit-learn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;功能模块&#34;&gt;功能模块&lt;/h2&gt;
+&lt;h3 id=&#34;1-数据收集&#34;&gt;1. 数据收集&lt;/h3&gt;
+&lt;p&gt;自动获取：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要指数行情（上证、深证、创业板等）&lt;/li&gt;
+&lt;li&gt;热门股票数据&lt;/li&gt;
+&lt;li&gt;市场涨跌排名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py collect --save
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-股票预测&#34;&gt;2. 股票预测&lt;/h3&gt;
+&lt;p&gt;基于 20+ 个技术指标特征，用 XGBoost 模型预测未来走势：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 预测单只股票（5天）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py predict --ticker &lt;span style=&#34;color:#ae81ff&#34;&gt;600151&lt;/span&gt; --days &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 预测多只股票&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py predict --ticker 600151,000001 --days &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出示例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;🔮 未来走势预测:
+
+  Day 1 (2026-02-14):
+    预测价格: ¥12.51
+    单日收益: +1.25%
+    操作建议: 📈 买入 (置信度: 45.0%)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-综合分析&#34;&gt;3. 综合分析&lt;/h3&gt;
+&lt;p&gt;整合市场数据和个股预测：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

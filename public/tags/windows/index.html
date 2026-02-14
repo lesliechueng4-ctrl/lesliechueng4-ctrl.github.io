@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | JC&#39;s Blog</title>
+<title>Windows | JC&#39;s Blog</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - JC&#39;s Blog">
+<meta name="description" content="记录问题解决、项目实践和个人思考">
 <meta name="author" content="JC">
-<link rel="canonical" href="https://lesliechueng4-ctrl.github.io/posts/">
+<link rel="canonical" href="https://lesliechueng4-ctrl.github.io/tags/windows/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lesliechueng4-ctrl.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lesliechueng4-ctrl.github.io/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="https://lesliechueng4-ctrl.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://lesliechueng4-ctrl.github.io/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="zh-cn" href="https://lesliechueng4-ctrl.github.io/posts/">
+<link rel="alternate" type="application/rss+xml" href="https://lesliechueng4-ctrl.github.io/tags/windows/index.xml" title="rss">
+<link rel="alternate" hreflang="zh-cn" href="https://lesliechueng4-ctrl.github.io/tags/windows/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,31 +71,16 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://lesliechueng4-ctrl.github.io/posts/">
+</script><meta property="og:url" content="https://lesliechueng4-ctrl.github.io/tags/windows/">
   <meta property="og:site_name" content="JC&#39;s Blog">
-  <meta property="og:title" content="Posts">
+  <meta property="og:title" content="Windows">
   <meta property="og:description" content="记录问题解决、项目实践和个人思考">
   <meta property="og:locale" content="zh-cn">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Posts">
+<meta name="twitter:title" content="Windows">
 <meta name="twitter:description" content="记录问题解决、项目实践和个人思考">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://lesliechueng4-ctrl.github.io/posts/"
-    }
-  ]
-}
-</script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -133,7 +118,7 @@
             </li>
             <li>
                 <a href="https://lesliechueng4-ctrl.github.io/posts/" title="文章">
-                    <span class="active">文章</span>
+                    <span>文章</span>
                 </a>
             </li>
             <li>
@@ -147,11 +132,11 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Posts
+    Windows
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">桌面文件自动整理工具：告别混乱的桌面
     </h2>
@@ -166,42 +151,6 @@
   </div>
   <footer class="entry-footer"><span title='2026-02-14 17:36:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
   <a class="entry-link" aria-label="post link to 桌面文件自动整理工具：告别混乱的桌面" href="https://lesliechueng4-ctrl.github.io/posts/desktop-organizer/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">股票分析工具：基于 XGBoost 的智能预测系统
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近做了一个股票分析工具，用机器学习预测股价走势。分享一下实现思路和使用方法。
-背景 经常关注股市，但手动分析太耗时。于是用 Python 做了个自动化工具，整合了数据收集、技术指标计算和机器学习预测。
-技术栈 数据源: akshare（A股实时数据） 技术指标: ta-lib（MACD、RSI、KDJ 等 20&#43; 指标） ML 模型: XGBoost 回归 数据处理: pandas、numpy、scikit-learn 功能模块 1. 数据收集 自动获取：
-主要指数行情（上证、深证、创业板等） 热门股票数据 市场涨跌排名 python stock_tool.py collect --save 2. 股票预测 基于 20&#43; 个技术指标特征，用 XGBoost 模型预测未来走势：
-# 预测单只股票（5天） python stock_tool.py predict --ticker 600151 --days 5 # 预测多只股票 python stock_tool.py predict --ticker 600151,000001 --days 5 输出示例：
-🔮 未来走势预测: Day 1 (2026-02-14): 预测价格: ¥12.51 单日收益: &#43;1.25% 操作建议: 📈 买入 (置信度: 45.0%) 3. 综合分析 整合市场数据和个股预测：
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-14 17:35:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
-  <a class="entry-link" aria-label="post link to 股票分析工具：基于 XGBoost 的智能预测系统" href="https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">欢迎来到我的博客
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>欢迎来到我的个人博客！
-这里我会分享：
-🔧 问题解决：遇到的技术难题和解决方案 💡 项目实践：我尝试或完成的项目 🧠 个人思考：对技术、生活的一些感悟 为什么写博客？ 记录是最好的学习方式。通过写作，我可以：
-梳理思路，加深理解 留下知识痕迹，方便回顾 与他人交流，获得反馈 技术栈 这个博客使用 Hugo 搭建，主题使用 PaperMod，部署在 GitHub Pages。
-简单、快速、免费。
-期待与你交流！
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-14 13:44:02 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
-  <a class="entry-link" aria-label="post link to 欢迎来到我的博客" href="https://lesliechueng4-ctrl.github.io/posts/my-first-post/"></a>
 </article>
     </main>
     
