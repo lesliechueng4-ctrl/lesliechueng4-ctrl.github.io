@@ -1,6 +1,5 @@
-baseURL: https://lesliechueng4-ctrl.github.io/
-language
-Code: zh-cn
+baseURL: https://lesliechueng4-ctrl.github.github.io/
+languageCode: zh-cn
 title: JC's Blog
 theme: PaperMod
 
