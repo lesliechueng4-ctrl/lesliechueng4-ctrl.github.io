@@ -1,0 +1,56 @@
+/* 移动端优化 */
+
+/* 主页头部优化 */
+.main-header {
+  padding: 1rem 0.5rem;
+}
+
+/* 文章列表优化 */
+.post-entry {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+
+.post-entry-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+/* 文章内容优化 */
+.main-article {
+  padding: 1rem 0.5rem;
+  max-width: 100%;
+}
+
+.main-article p {
+  font-size: 1rem;
+  line: 1.7;
+  margin: 1rem 0;
+}
+
+/* 代码块优化 */
+.post-content code {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.post-content pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+/* 优化加载性能 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

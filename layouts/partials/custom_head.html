@@ -1,0 +1,5 @@
+{{- if not .Site.Params.assets.disableFingerprinting -}}
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" />
+{{- else -}}
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL | fingerprint }}" />
+{{- end -}}

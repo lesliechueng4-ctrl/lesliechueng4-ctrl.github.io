@@ -1,4 +1,4 @@
-baseURL: https://lesliechueng4-ctrl.github.github.io/
+baseURL: https://lesliechueng4-ctrl.github.io/
 languageCode: zh-cn
 title: JC's Blog
 theme: PaperMod
@@ -8,35 +8,51 @@ params:
   description: "记录问题解决、项目实践和个人思考"
   author: JC
 
+  # 移动端优化
   defaultTheme: auto
-  ShowShareButtons: true
-  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowReadingTime: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTitleList: true
-  ShowFullTextInRSS: true
+  ShowRssButton: false
+  ShowToc: false
   ShowAllPagesInArchive: true
-  ShowPageNums: true
 
+  # 性能优化
   assets:
     disableHLJS: true
+    disableFingerprinting: true
 
+  # 主页配置
   homeInfoParams:
     Title: "Hi there 👋"
     Content: >
       欢迎来到我的个人博客。这里记录了我解决技术问题、实践项目以及个人思考的内容。
 
+  # 社交链接
   socialIcons:
     - name: github
       url: "https://github.com/lesliechueng4-ctrl"
 
+  # 启用搜索
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# 语言配置
 languages:
   zh-cn:
     languageName: 中文
     title: JC's Blog
     weight: 1
 
+# 菜单配置
 menu:
   main:
     - name: 首页
@@ -45,12 +61,6 @@ menu:
     - name: 文章
       url: /posts/
       weight: 2
-    - name: 归档
-      url: /archives/
-      weight: 3
     - name: 标签
       url: /tags/
-      weight: 4
-    - name: 搜索
-      url: /search/
-      weight: 5
+      weight: 3
