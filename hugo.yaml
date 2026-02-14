@@ -1,0 +1,56 @@
+baseURL: https://sjin5.github.io/
+languageCode: zh-cn
+title: JC's Blog
+theme: PaperMod
+
+params:
+  env: production
+  description: "记录问题解决、项目实践和个人思考"
+  author: JC
+
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTitleList: true
+  ShowFullTextInRSS: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+
+  assets:
+    disableHLJS: true
+
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: >
+      欢迎来到我的个人博客。这里记录了我解决技术问题、实践项目以及个人思考的内容。
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/sjin5"
+
+languages:
+  zh-cn:
+    languageName: 中文
+    title: JC's Blog
+    weight: 1
+
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 1
+    - name: 文章
+      url: /posts/
+      weight: 2
+    - name: 归档
+      url: /archives/
+      weight: 3
+    - name: 标签
+      url: /tags/
+      weight: 4
+    - name: 搜索
+      url: /search/
+      weight: 5
