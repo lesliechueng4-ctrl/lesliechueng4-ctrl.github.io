@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>个人 on JC&#39;s Blog</title>
-    <link>https://sjin5.github.io/categories/%E4%B8%AA%E4%BA%BA/</link>
+    <link>https://lesliechueng4-ctrl.github.io/categories/%E4%B8%AA%E4%BA%BA/</link>
     <description>Recent content in 个人 on JC&#39;s Blog</description>
     <generator>Hugo -- 0.155.3</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 14 Feb 2026 13:44:02 +0800</lastBuildDate>
-    <atom:link href="https://sjin5.github.io/categories/%E4%B8%AA%E4%BA%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lesliechueng4-ctrl.github.io/categories/%E4%B8%AA%E4%BA%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>欢迎来到我的博客</title>
-      <link>https://sjin5.github.io/posts/my-first-post/</link>
+      <link>https://lesliechueng4-ctrl.github.io/posts/my-first-post/</link>
       <pubDate>Sat, 14 Feb 2026 13:44:02 +0800</pubDate>
-      <guid>https://sjin5.github.io/posts/my-first-post/</guid>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/my-first-post/</guid>
       <description>&lt;p&gt;欢迎来到我的个人博客！&lt;/p&gt;
 &lt;p&gt;这里我会分享：&lt;/p&gt;
 &lt;ul&gt;
@@ -32,26 +32,6 @@
 &lt;p&gt;简单、快速、免费。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;期待与你交流！&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>欢迎来到我的个人博客！</p>
-<p>这里我会分享：</p>
-<ul>
-<li>🔧 <strong>问题解决</strong>：遇到的技术难题和解决方案</li>
-<li>💡 <strong>项目实践</strong>：我尝试或完成的项目</li>
-<li>🧠 <strong>个人思考</strong>：对技术、生活的一些感悟</li>
-</ul>
-<h2 id="为什么写博客">为什么写博客？</h2>
-<p>记录是最好的学习方式。通过写作，我可以：</p>
-<ol>
-<li>梳理思路，加深理解</li>
-<li>留下知识痕迹，方便回顾</li>
-<li>与他人交流，获得反馈</li>
-</ol>
-<h2 id="技术栈">技术栈</h2>
-<p>这个博客使用 <a href="https://gohugo.io/">Hugo</a> 搭建，主题使用 <a href="https://github.com/adityatelange/hugo-PaperMod">PaperMod</a>，部署在 <a href="https://pages.github.com/">GitHub Pages</a>。</p>
-<p>简单、快速、免费。</p>
-<hr>
-<p>期待与你交流！</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
