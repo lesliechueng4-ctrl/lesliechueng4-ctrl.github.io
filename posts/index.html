@@ -153,6 +153,25 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Smart OAK 工单自动化工具：提升 IT 运维效率
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>作为 IT 运维人员，每天要处理大量的 OAK 工单。手动处理效率太低，于是开发了 Smart OAK 自动化工具来提升工作效率。
+背景 Oak 是我们公司用的工单系统，日常工作包括：
+批量发送邮件 - 根据工单号发送给不同支持人员 密码到期查询 - 查看工单的工单密码什么时候过期 自动打开工单 - 直接在浏览器中打开工单链接 状态跟踪 - 跟踪哪些工单已处理，哪些还未处理 手动处理这些问题非常耗时，而且容易出错。于是用 Python 开发了自动化工具。
+核心功能 1. 批量邮件发送 工具内置邮件模板系统，可以根据工单类型选择不同的邮件模板：
+# 支持多种邮件模板 templates = [ &#34;系统升级通知&#34;, &#34;服务请求确认&#34;, &#34;问题反馈&#34;, &#34;日常巡检报告&#34; ] # 批量发送 for ticket in tickets: send_email(ticket, template) 2. OAK 密码到期查询 自动计算密码剩余天数，并高亮显示即将过期的工单：
+def calculate_pw_days_left(ticket_no): &#34;&#34;&#34;计算密码剩余天数&#34;&#34;&#34; pw_expiry = get_expiry_date(ticket_no) days_left = (pw_expiry - datetime.now()).days return days_left 3. 自动打开工单链接 使用 Playwright 自动打开工单页面，支持无头模式运行：
+from playwright.sync_api import sync_playwright async def open_ticket(ticket_no): &#34;&#34;&#34;打开工单页面&#34;&#34;&#34; browser = await sync_playwright().launch(headless=True) page = await browser.new_page() await page.goto(OAK_TASK_URL % ticket_no) await browser.close() 4. Excel 数据导入 支持从 Excel 文件导入工单列表，自动识别列名并映射：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-14 19:20:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
+  <a class="entry-link" aria-label="post link to Smart OAK 工单自动化工具：提升 IT 运维效率" href="https://lesliechueng4-ctrl.github.io/posts/smart-oak-tool/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">桌面文件自动整理工具：告别混乱的桌面
     </h2>
   </header>

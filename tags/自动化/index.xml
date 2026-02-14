@@ -6,8 +6,57 @@
     <description>Recent content in 自动化 on JC&#39;s Blog</description>
     <generator>Hugo -- 0.155.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Feb 2026 17:36:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 19:20:00 +0800</lastBuildDate>
     <atom:link href="https://lesliechueng4-ctrl.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Smart OAK 工单自动化工具：提升 IT 运维效率</title>
+      <link>https://lesliechueng4-ctrl.github.io/posts/smart-oak-tool/</link>
+      <pubDate>Sat, 14 Feb 2026 19:20:00 +0800</pubDate>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/smart-oak-tool/</guid>
+      <description>&lt;p&gt;作为 IT 运维人员，每天要处理大量的 OAK 工单。手动处理效率太低，于是开发了 Smart OAK 自动化工具来提升工作效率。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;Oak 是我们公司用的工单系统，日常工作包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;批量发送邮件&lt;/strong&gt; - 根据工单号发送给不同支持人员&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;密码到期查询&lt;/strong&gt; - 查看工单的工单密码什么时候过期&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动打开工单&lt;/strong&gt; - 直接在浏览器中打开工单链接&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态跟踪&lt;/strong&gt; - 跟踪哪些工单已处理，哪些还未处理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;手动处理这些问题非常耗时，而且容易出错。于是用 Python 开发了自动化工具。&lt;/p&gt;
+&lt;h2 id=&#34;核心功能&#34;&gt;核心功能&lt;/h2&gt;
+&lt;h3 id=&#34;1-批量邮件发送&#34;&gt;1. 批量邮件发送&lt;/h3&gt;
+&lt;p&gt;工具内置邮件模板系统，可以根据工单类型选择不同的邮件模板：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 支持多种邮件模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;templates &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;系统升级通知&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;服务请求确认&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;问题反馈&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;日常巡检报告&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 批量发送&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ticket &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; tickets:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    send_email(ticket, template)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-oak-密码到期查询&#34;&gt;2. OAK 密码到期查询&lt;/h3&gt;
+&lt;p&gt;自动计算密码剩余天数，并高亮显示即将过期的工单：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;calculate_pw_days_left&lt;/span&gt;(ticket_no):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;计算密码剩余天数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    pw_expiry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; get_expiry_date(ticket_no)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    days_left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (pw_expiry &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; datetime&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;now())&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;days
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; days_left
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-自动打开工单链接&#34;&gt;3. 自动打开工单链接&lt;/h3&gt;
+&lt;p&gt;使用 Playwright 自动打开工单页面，支持无头模式运行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; playwright.sync_api &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sync_playwright
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;open_ticket&lt;/span&gt;(ticket_no):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;打开工单页面&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    browser &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; sync_playwright()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;launch(headless&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    page &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;new_page()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; page&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;goto(OAK_TASK_URL &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; ticket_no)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;close()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-excel-数据导入&#34;&gt;4. Excel 数据导入&lt;/h3&gt;
+&lt;p&gt;支持从 Excel 文件导入工单列表，自动识别列名并映射：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>桌面文件自动整理工具：告别混乱的桌面</title>
       <link>https://lesliechueng4-ctrl.github.io/posts/desktop-organizer/</link>

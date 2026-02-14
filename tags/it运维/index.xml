@@ -10,9 +10,9 @@
     <atom:link href="https://lesliechueng4-ctrl.github.io/tags/it%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smart OAK 工单自动化工具：提升 IT 运维效率</title>
-      <link>https://lesliechueng4-ctrl.github.io/posts/smartoak-tool/</link>
+      <link>https://lesliechueng4-ctrl.github.io/posts/smart-oak-tool/</link>
       <pubDate>Sat, 14 Feb 2026 19:20:00 +0800</pubDate>
-      <guid>https://lesliechueng4-ctrl.github.io/posts/smartoak-tool/</guid>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/smart-oak-tool/</guid>
       <description>&lt;p&gt;作为 IT 运维人员，每天要处理大量的 OAK 工单。手动处理效率太低，于是开发了 Smart OAK 自动化工具来提升工作效率。&lt;/p&gt;
 &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;Oak 是我们公司用的工单系统，日常工作包括：&lt;/p&gt;
