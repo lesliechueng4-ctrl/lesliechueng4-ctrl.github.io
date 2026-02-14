@@ -169,6 +169,41 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">桌面文件自动整理工具：告别混乱的桌面
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>桌面文件越来越多？找文件像大海捞针？做了个桌面文件自动整理工具，解放双手。
+背景 我是个典型的&#34;桌面堆放型&#34;用户。截图、下载的文件、临时的文档… 全都堆在桌面上，时间一久就变成&#34;文件坟场&#34;。
+每次找文件都要翻半天，手动整理又太耗时。于是写了个 Python 脚本来自动化这个任务。
+功能特性 ✨ 智能分类 - 按文件类型自动归档 📅 日期归档 - 按修改日期创建子文件夹 🔄 去重清理 - 检测并删除重复文件 📝 详细日志 - 记录所有操作 ↩️ 一键回滚 - 不满意随时恢复 👀 模拟运行 - 预览操作，避免意外
+文件分类规则 分类 支持的扩展名 Images .jpg, .png, .gif, .bmp, .webp, .svg 等 Documents .pdf, .doc, .docx, .txt, .xlsx, .md 等 Videos .mp4, .avi, .mkv, .mov, .flv 等 Audio .mp3, .wav, .flac, .aac 等 Archives .zip, .rar, .7z, .tar 等 Installers .exe, .msi, .appx 等 Code .py, .js, .html, .css, .java等 使用方法 基本使用 # 整理当前用户桌面 python desktop_cleaner.py 模拟运行（推荐首次使用） # 先看看会发生什么 python desktop_cleaner.py --dry-run 整理指定文件夹 # 整理下载文件夹 python desktop_cleaner.py -d &#34;C:\Users\YourName\Downloads&#34; 回滚操作 &#34;后悔了？一键恢复&#34; python desktop_cleaner.py --rollback 整理后的效果 整理前：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-14 17:36:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
+  <a class="entry-link" aria-label="post link to 桌面文件自动整理工具：告别混乱的桌面" href="https://lesliechueng4-ctrl.github.io/posts/desktop-organizer/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">股票分析工具：基于 XGBoost 的智能预测系统
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>最近做了一个股票分析工具，用机器学习预测股价走势。分享一下实现思路和使用方法。
+背景 经常关注股市，但手动分析太耗时。于是用 Python 做了个自动化工具，整合了数据收集、技术指标计算和机器学习预测。
+技术栈 数据源: akshare（A股实时数据） 技术指标: ta-lib（MACD、RSI、KDJ 等 20&#43; 指标） ML 模型: XGBoost 回归 数据处理: pandas、numpy、scikit-learn 功能模块 1. 数据收集 自动获取：
+主要指数行情（上证、深证、创业板等） 热门股票数据 市场涨跌排名 python stock_tool.py collect --save 2. 股票预测 基于 20&#43; 个技术指标特征，用 XGBoost 模型预测未来走势：
+# 预测单只股票（5天） python stock_tool.py predict --ticker 600151 --days 5 # 预测多只股票 python stock_tool.py predict --ticker 600151,000001 --days 5 输出示例：
+🔮 未来走势预测: Day 1 (2026-02-14): 预测价格: ¥12.51 单日收益: &#43;1.25% 操作建议: 📈 买入 (置信度: 45.0%) 3. 综合分析 整合市场数据和个股预测：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-14 17:35:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;<span>JC</span></footer>
+  <a class="entry-link" aria-label="post link to 股票分析工具：基于 XGBoost 的智能预测系统" href="https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">欢迎来到我的博客
     </h2>
   </header>

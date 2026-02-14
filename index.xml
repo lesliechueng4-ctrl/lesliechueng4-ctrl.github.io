@@ -6,8 +6,120 @@
     <description>Recent content on JC&#39;s Blog</description>
     <generator>Hugo -- 0.155.3</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Feb 2026 13:44:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 17:36:00 +0800</lastBuildDate>
     <atom:link href="https://lesliechueng4-ctrl.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>桌面文件自动整理工具：告别混乱的桌面</title>
+      <link>https://lesliechueng4-ctrl.github.io/posts/desktop-organizer/</link>
+      <pubDate>Sat, 14 Feb 2026 17:36:00 +0800</pubDate>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/desktop-organizer/</guid>
+      <description>&lt;p&gt;桌面文件越来越多？找文件像大海捞针？做了个桌面文件自动整理工具，解放双手。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;我是个典型的&amp;quot;桌面堆放型&amp;quot;用户。截图、下载的文件、临时的文档&amp;hellip; 全都堆在桌面上，时间一久就变成&amp;quot;文件坟场&amp;quot;。&lt;/p&gt;
+&lt;p&gt;每次找文件都要翻半天，手动整理又太耗时。于是写了个 Python 脚本来自动化这个任务。&lt;/p&gt;
+&lt;h2 id=&#34;功能特性&#34;&gt;功能特性&lt;/h2&gt;
+&lt;p&gt;✨ &lt;strong&gt;智能分类&lt;/strong&gt; - 按文件类型自动归档
+📅 &lt;strong&gt;日期归档&lt;/strong&gt; - 按修改日期创建子文件夹
+🔄 &lt;strong&gt;去重清理&lt;/strong&gt; - 检测并删除重复文件
+📝 &lt;strong&gt;详细日志&lt;/strong&gt; - 记录所有操作
+↩️ &lt;strong&gt;一键回滚&lt;/strong&gt; - 不满意随时恢复
+👀 &lt;strong&gt;模拟运行&lt;/strong&gt; - 预览操作，避免意外&lt;/p&gt;
+&lt;h2 id=&#34;文件分类规则&#34;&gt;文件分类规则&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;分类&lt;/th&gt;
+          &lt;th&gt;支持的扩展名&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Images&lt;/td&gt;
+          &lt;td&gt;.jpg, .png, .gif, .bmp, .webp, .svg 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Documents&lt;/td&gt;
+          &lt;td&gt;.pdf, .doc, .docx, .txt, .xlsx, .md 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Videos&lt;/td&gt;
+          &lt;td&gt;.mp4, .avi, .mkv, .mov, .flv 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Audio&lt;/td&gt;
+          &lt;td&gt;.mp3, .wav, .flac, .aac 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Archives&lt;/td&gt;
+          &lt;td&gt;.zip, .rar, .7z, .tar 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Installers&lt;/td&gt;
+          &lt;td&gt;.exe, .msi, .appx 等&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Code&lt;/td&gt;
+          &lt;td&gt;.py, .js, .html, .css, .java等&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;h3 id=&#34;基本使用&#34;&gt;基本使用&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整理当前用户桌面&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python desktop_cleaner.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;模拟运行推荐首次使用&#34;&gt;模拟运行（推荐首次使用）&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 先看看会发生什么&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python desktop_cleaner.py --dry-run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;整理指定文件夹&#34;&gt;整理指定文件夹&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 整理下载文件夹&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python desktop_cleaner.py -d &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Users\YourName\Downloads&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;回滚操作&#34;&gt;回滚操作&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;后悔了？一键恢复&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python desktop_cleaner.py --rollback
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;整理后的效果&#34;&gt;整理后的效果&lt;/h2&gt;
+&lt;p&gt;整理前：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>股票分析工具：基于 XGBoost 的智能预测系统</title>
+      <link>https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/</link>
+      <pubDate>Sat, 14 Feb 2026 17:35:00 +0800</pubDate>
+      <guid>https://lesliechueng4-ctrl.github.io/posts/stock-analysis-tool/</guid>
+      <description>&lt;p&gt;最近做了一个股票分析工具，用机器学习预测股价走势。分享一下实现思路和使用方法。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;经常关注股市，但手动分析太耗时。于是用 Python 做了个自动化工具，整合了数据收集、技术指标计算和机器学习预测。&lt;/p&gt;
+&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据源&lt;/strong&gt;: akshare（A股实时数据）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技术指标&lt;/strong&gt;: ta-lib（MACD、RSI、KDJ 等 20+ 指标）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ML 模型&lt;/strong&gt;: XGBoost 回归&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据处理&lt;/strong&gt;: pandas、numpy、scikit-learn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;功能模块&#34;&gt;功能模块&lt;/h2&gt;
+&lt;h3 id=&#34;1-数据收集&#34;&gt;1. 数据收集&lt;/h3&gt;
+&lt;p&gt;自动获取：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要指数行情（上证、深证、创业板等）&lt;/li&gt;
+&lt;li&gt;热门股票数据&lt;/li&gt;
+&lt;li&gt;市场涨跌排名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py collect --save
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-股票预测&#34;&gt;2. 股票预测&lt;/h3&gt;
+&lt;p&gt;基于 20+ 个技术指标特征，用 XGBoost 模型预测未来走势：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 预测单只股票（5天）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py predict --ticker &lt;span style=&#34;color:#ae81ff&#34;&gt;600151&lt;/span&gt; --days &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 预测多只股票&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python stock_tool.py predict --ticker 600151,000001 --days &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出示例：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;🔮 未来走势预测:
+
+  Day 1 (2026-02-14):
+    预测价格: ¥12.51
+    单日收益: +1.25%
+    操作建议: 📈 买入 (置信度: 45.0%)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-综合分析&#34;&gt;3. 综合分析&lt;/h3&gt;
+&lt;p&gt;整合市场数据和个股预测：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>欢迎来到我的博客</title>
       <link>https://lesliechueng4-ctrl.github.io/posts/my-first-post/</link>
