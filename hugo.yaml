@@ -1,5 +1,6 @@
-baseURL: https://sjin5.github.io/
-languageCode: zh-cn
+baseURL: https://lesliechueng4-ctrl.github.io/
+language
+Code: zh-cn
 title: JC's Blog
 theme: PaperMod
 
@@ -29,7 +30,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/sjin5"
+      url: "https://github.com/lesliechueng4-ctrl"
 
 languages:
   zh-cn:
